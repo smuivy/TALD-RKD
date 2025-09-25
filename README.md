@@ -16,5 +16,6 @@ of the original authors.
 
 Pretrained model on brain MRI dataset:
 
-first-stage: https://drive.google.com/file/d/1Jnt8vHDxajiN2tId7RYPpWXQEQJTPVnF/view?usp=sharing
+first-stage: https://drive.google.com/file/d/1Jnt8vHDxajiN2tId7RYPpWXQEQJTPVnF/view?usp=drive_link
+
 second-stage: https://drive.google.com/file/d/1sceUFywsbl3kZVK3wWB5JUlNLvriV1ky/view?usp=drive_link
