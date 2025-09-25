@@ -71,9 +71,8 @@ def test():
     encoder_var = encoder_var.to(device)
     fc1 = nn.Sequential(nn.Linear(2048,2048*7*7), nn.ReLU())
     fc1 = fc1.to(device)
-
-    dist_ckp_path = 
-    dist_ckp = torch.load(dist_ckp_path)
+   
+    dist_ckp = torch.load(first_stage_path)
     for k, v in list(dist_ckp['bn'].items()):
         if 'memory' in k:
            dist_ckp['bn'].pop(k)
@@ -128,10 +127,8 @@ def test():
     diffusion_var = diffusion_var.to(device)
     concate = nn.Sequential(nn.Linear(512+1024+2048, 512), nn.ReLU())
     concate = concate.to(device)
-    
-  
-    diffusion_ckp_path = 
-    diffusion_ckp = torch.load(diffusion_ckp_path)
+   
+    diffusion_ckp = torch.load(diffusion_path)
     diffusion.load_state_dict(diffusion_ckp['diffusion'])
     concate.load_state_dict(diffusion_ckp['concate'])
     vss1_forward.load_state_dict(diffusion_ckp['vss1_forward'])
